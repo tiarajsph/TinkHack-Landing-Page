@@ -1,0 +1,57 @@
+#overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical center */
+  align-items: center;       /* horizontal center */
+  text-align: center;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  color: rgb(255, 255, 255);              /* text color */
+  font-weight: 900;          /* very bold */
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* optional gradient */
+  overflow: hidden;          /* for slide-in effect */
+}
+
+/* Slide-in effect for h2 */
+#overview h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* Slide-in effect for paragraph with delay */
+#overview p {
+  font-size: 1.5rem;
+  max-width: 600px;
+  animation: slideIn 1s ease-out 0.5s forwards;
+  opacity: 0; /* start hidden, will appear with animation */
+}
+
+/* Slide-in keyframes */
+@keyframes slideIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Optional: typewriter effect for h2 instead of slide */
+.typewriter {
+  overflow: hidden; 
+  border-right: 0.15em solid white; 
+  white-space: nowrap; 
+  animation: typing 3s steps(30, end), blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}

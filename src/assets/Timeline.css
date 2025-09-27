@@ -1,0 +1,29 @@
+#timeline ul {
+  list-style: none;           /* remove default bullets */
+  padding: 0;
+  display: flex;
+  flex-direction: column;     /* stack items vertically */
+  gap: 1rem; 
+ color: #6b42e6;
+                   /* space between items */
+}
+
+#timeline ul li {
+  border: 2px solid #6b42e6; /* blue border */
+  border-radius: 8px;         /* rounded corners */
+  padding: 1rem;              /* space inside each item */
+  transition: all 0.3s ease;  /* smooth hover effect */
+  cursor: default;            /* optional: makes pointer normal */
+}
+
+#timeline ul li:hover {
+  background-color: #6b42e6;  /* blue background on hover */
+  color: white;               /* text turns white */
+  transform: translateY(-3px); /* slight lift effect */
+}
+
+#timeline h2{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #6b42e6;
+}
